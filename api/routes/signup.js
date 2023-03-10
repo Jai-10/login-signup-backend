@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
                     bcrypt.hash(req.body.password, saltRounds)
                         .then(hashedPass => {
                             const newUser = new SignUp({
-                                // _id: mongoose.Types.ObjectId(),
+                                _id: mongoose.Types.ObjectId(),
                                 username: req.body.username,
                                 email: req.body.email,
                                 password: hashedPass
