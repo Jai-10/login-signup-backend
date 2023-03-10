@@ -7,18 +7,17 @@ const session = require('express-session')
 
 const app = express()
 
-app.use( userSession({
-    resave: true,
-    saveUninitialized: true,
-    secret: ['secret_key']
-}) )
-
-
 app.use(cors({origin: '*'}))
 app.use(morgan('dev'))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
+
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: ['secret_key']
+}))
 
 
 
