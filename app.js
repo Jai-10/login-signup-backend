@@ -6,7 +6,7 @@ const morgan = require('morgan')
 
 const app = express()
 
-app.use( userSession({
+app.use(session({
     resave: true,
     saveUninitialized: true,
     secret: ['secret_key']
@@ -29,6 +29,7 @@ mongoose.connect("mongodb+srv://jai:jai@cluster0.3wvybhi.mongodb.net/?retryWrite
 const loginRoute = require('./api/routes/login')
 const signupRoute = require('./api/routes/signup')
 const logoutRoute = require('./api/routes/logout')
+const session = require('express-session')
 
 app.use('/login', loginRoute)
 app.use('/signup', signupRoute)
