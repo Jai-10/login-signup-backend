@@ -10,7 +10,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
     secret: ['secret_key']
-}) )
+}))
 
 
 app.use(cors({origin: '*'}))
