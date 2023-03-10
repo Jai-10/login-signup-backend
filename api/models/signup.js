@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const projectSignupSchema = new mongoose.Schema({
-        _id: mongoose.Schema.Types.ObjectId,
+        // _id: mongoose.Schema.Types.ObjectId,
         username: {
             type: String,
             required: true
