@@ -4,6 +4,7 @@ const projectSignupSchema = new mongoose.Schema({
         // _id: mongoose.Schema.Types.ObjectId,
         username: {
             type: String,
+            min: 4,
             required: true
         },
         email: {
@@ -12,15 +13,14 @@ const projectSignupSchema = new mongoose.Schema({
         },
         password: {
             type: String,
+            min: 6,
             required: true
         },
         newPassword: {
-            type: String,
-            required: true
+            type: String
         },
         theme: {
-            type: String,
-            required: true
+            type: String
         }
     },
     {
